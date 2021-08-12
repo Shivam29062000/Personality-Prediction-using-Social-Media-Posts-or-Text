@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}
+Text Personality
+{% endblock %}
+
+{% block style %}
+<style>
+
+  body {
+    background: url(https://images.unsplash.com/photo-1521220546621-cf34a1165c67?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .main-container {
+    height: calc(210vh - 130px);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+  }
+
+  .tp-main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+  }
+
+  .result {
+    padding-top: 5%;
+    font-size: 3rem;
+  }
+
+  .p-c {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .con{
+    font-size: 20px;
+    padding-right:10%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+  }
+  
+</style>
+{% endblock %}
+
+{% block body %}
+  <div class="tp-main">
+    <p class="result">
+      {% print(result) %}
+    </p>
+    <div class="p-c">
+      <p>Introversion (I) – Extroversion (E)</p>
+      <p>Intuition (N) – Sensing (S)</p>
+      <p>Thinking (T) – Feeling (F)</p>
+      <p>Judging (J) – Perceiving (P)</p>
+    </div>
+    <div class="con">
+      <ol>
+        <li><b>ISTJ: Introverted, Sensing, Thinking, Judging:</b> The ISTJ personality type is generally practical and responsible. They rely on logical decision-making, accomplishing tasks in an orderly and organised fashion. ISTJs typically enjoy a neat and organised space, both at home and at work.</li>
+        <li><b>ISFJ: Introverted, Sensing, Feeling, Judging:</b> Conventional and grounded, ISFJs respect and strive to uphold established structures and create and maintain orderly environments. They have a strong work ethic that includes serving others and are dedicated to their duties. ISFJs are conscientious and methodical workers who are not satisfied until the job is done.
+        </li>
+        <li><b>INFJ: Introverted, Intuitive, Feeling, Judging:</b> This is the most rare of the 16 personalities. The INFJ type is highly insightful about people’s needs, motivations and concerns. INFJs often find value in relationships with others. While often artistic, creative and complex, INFJs are also deeply caring and gentle. Often referred to as an advocate, INFJs often find meaning in work that directly helps others.   
+        </li>
+        <li><b>INTJ: Introverted, Intuitive, Thinking, Judging:</b> The INTJ type is guided by reason and logic. They are driven by gaining and using knowledge. They are highly confident and seek to reform and improve the world around them. While self-confident, INTJs can be uncomfortable in large groups or among people they don’t know well. They prefer to discuss ideas and facts rather than engage in superficial small talk.
+        </li>
+        <li>
+          <b>ISTP: Introverted, Sensing, Thinking, Perceiving:</b> The ISTP personality type is typically quiet and observant. When a problem arises, they are tolerant, flexible and quick to find a solution. Organised and practical, the ISTP values data, logic and facts to understand issues. ISTPs often find meaningful work making and creating things, finding ways to make things work and learning along the way.
+        </li>
+        <li>
+          <b>ISFP: Introverted, Sensing, Feeling, Perceiving:</b> The ISFP personality type is usually friendly and quiet. They enjoy observing and taking in the environment around them. ISFP typically prefer autonomy, working in their own space and completing tasks on their own schedule. ISFPs highly value loyalty and commitment in their personal relationships. Harmony is also important to ISFPs, avoiding confrontation and keeping their opinions to themselves.
+        </li>
+        <li>
+          <b>INFP: Introverted, Intuitive, Feeling, Perceiving:</b> Because INFPs are highly curious, inquisitive and innovative individuals, they are usually optimistic in their world view and can be an inspiring team member. INFPs comprise just 2% of the population. They are highly creative, easily find connections in hidden patterns and enjoy abstract thinking.
+        </li>
+        <li>
+          <b>INTP: Introverted, Intuitive, Thinking, Perceiving:</b> The INTP personality type tends to be quiet and contained. They enjoy abstract ideas and deep thought about theories over interaction with others. INTPs desire logical answers to questions or problems that arise in their environment. Often sceptical and analytical, INTPs are great problem-solvers and helpful when certain business issues present themselves. They are often highly creative, intelligent and attentive.
+        </li>
+        <li>
+          <b>ESTP: Extraverted, Sensing, Thinking, Perceiving:</b> The ESTP personality type is often referred to as entrepreneurial. They are energetic, pragmatic and flexible. They eagerly search for fast results often taking risks to come up with the best solutions. ESTPs often do before they think, fixing and adapting their processes as they go. ESTPs enjoy a fast-paced lifestyle by living “in the moment” and spending time around groups of people.
+        </li>
+        <li>
+          <b>ESFP: Extraverted, Sensing, Feeling, Perceiving:</b> Often seen as the entertainer, the ESFP personality type is outgoing, friendly and generous. They enjoy spending time around others, spreading excitement and joy both at home and at work. While practical and realistic in their work, they also value having fun achieving their goals. They are energetic and flexible, encouraging others along the way.
+        </li>
+        <li>
+          <b>ENFP: Extraverted, Intuitive, Feeling, Perceiving:</b> The ENFP personality type can be powerful in many workplaces. The ENFP type is generally innovative, inspiring and often unafraid of taking risks. ENFPs make up approximately 8% of the general population and include more women than men. They are highly perceptive when understanding how individuals and groups function, making them natural leaders inside organisations. ENFPs seek excitement, enjoy abstract and experiential learning, and seek maximum potential in their career experiences and in others.
+        </li>
+        <li>
+          <b>ENTP: Extraverted, Intuitive, Thinking, Perceiving:</b> The ENTP personality is ideal for entrepreneurial thinking whether ENTPs choose to own their own business or innovate within an organisation. ENTPs often struggle to meet deadlines and find it difficult to work within hierarchies, which can restrict their innovative talents. ENTPs prefer to focus on the “big idea” and resist routine and repetitive tasks. Instead, they prefer highly conceptual work, problem-solving and leaving details to others.
+        </li>
+        <li>
+          <b>ESTJ: Extraverted, Sensing, Thinking, Judging:</b> ESTJs make great executives, valuing tradition and order. Strong character traits are important to ESTJs who respect honesty and dedication both in themselves and others. ESTJs are practical decision-makers, looking for ways to quickly and effectively see results. Organised and logical, ESTJs are good at both creating and implementing plans. They do not shy away from difficult plans or decisions and work to bring others together towards a common purpose.
+        </li>
+        <li>
+          <b>ESFJ: Extraverted, Sensing, Feeling, Judging:</b> ESFJs are serious and practical, committed to their responsibilities and sensitive to the needs of others. They strive for harmony and are generous with their time, efforts, emotions and are eager to please—both at work and at home. ESFJs value loyalty and tradition and hold on to a strict moral code. They typically enjoy their routines and maintain a regular schedule that allows them to stay organised and productive.
+        </li>
+        <li>
+          <b>ENFJ: Extraverted, Intuitive, Feeling, Judging:</b> The ENFJ personality types are often charismatic, empathetic leaders. They are highly intuitive when it comes to others’ emotions, needs and motivations. ENFJs are often loyal and responsible, looking for ways to improve their team by leading with inspiration and responsiveness. ENFJs often look for opportunities where they can make the world better and can bring people together to make a difference.
+        </li>
+        <li>
+          <b>ENTJ: Extraverted, Intuitive, Thinking, Judging:</b> Often referred to as “the commander”, ENTJs are natural leaders. The ENTJ personality type is often honest, ready to make quick decisions. They are quick to spot inefficiencies and develop ways to solve problems. ENTJs highly value goal-setting, organisation and planning. They are charismatic and confident which helps them to rally a group behind a common goal. They sometimes tend to be seen as harsh by those around them, using their drive and rational thinking to achieve goals by whatever means necessary.
+        </li>
+      </ol>
+    </div>
+  </div>
+{% endblock %}

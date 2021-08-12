@@ -1,0 +1,95 @@
+{% extends "base.html" %} 
+
+{% block title %} Text Personality {% endblock %} 
+
+{% block style %}
+<style>
+
+  body {
+    background: url(https://images.unsplash.com/photo-1521220546621-cf34a1165c67?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .pred-content {
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-h {
+		color: white;
+		font-weight: 700;
+		font-size: 5em;
+	}
+  .main-container {
+    height: calc(100vh - 130px);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+  }
+
+	#var {
+		color: #0073e6;
+	}
+
+  hr {
+		width: 85%;
+		border-top: 1px solid #f8f8f8;
+		border-bottom: solid rgb(0,0,0,0.2);
+	}
+
+  .input-sec {
+    margin-top: 30px;
+  }
+
+  .form-items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  textarea {
+    width: 500px;
+    height: 200px;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  button {
+    padding: 5px 10px;
+		border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    background: transparent;
+    transition: 0.3s all ease-out;
+    cursor: pointer;
+    font-size: 1.3rem;
+	}
+
+  button:hover{
+    color: #272c2e;
+    background-color: #fff;
+    transition: 0.3s all ease-out;
+  }
+
+</style>
+{% endblock %} 
+
+{% block body %}
+<div class="pred-content">
+  <h1 class="main-h">Text <span id="var">Personality</span></h1>
+  <hr/>
+  <div class="input-sec">
+    <form action="http://127.0.0.1:5000/text-pred" method="POST" id="text=pred">
+      <div class="form-items">
+        <textarea id="text-pred" name="txt" rows="4" cols="50" placeholder="Enter text here...." required></textarea>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

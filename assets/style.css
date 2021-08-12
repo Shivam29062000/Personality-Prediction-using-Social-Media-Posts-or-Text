@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  margin: 0 20px;
+  box-sizing: border-box;
+}
+
+.input-box {
+  padding: 5px;
+}
+
+.predict-btn {
+  margin-left: 10px;
+  padding: 5px;
+  font-weight: bold;
+  width: 70px;
+  cursor: pointer;
+}
+
+.head {
+  margin-top: 35px;
+  padding: 30px 0 5px;
+  font-size: 2.2rem;
+  border-bottom: 2px solid #000;
+}
+
+.graph-tile {
+  margin: 20px 10px;
+  width: 45%;
+  min-width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  transition: 0.3s all ease-out;
+}
+
+.graph-tile:hover {
+  transform: scale(1.01);
+  transition: 0.3s all ease-out;
+}
+
+.board {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.sub-head {
+  font-size: 2rem;
+  margin-top: 50px;
+}
+
+.sub-p {
+  font-size: 1.3rem;
+  padding-left: 10px;
+}
+
+.jlist {
+  font-size: 1.3rem;
+  line-height: 1.8;
+}
+
+@media screen and (max-width: 897px) {
+  .graph-tile {
+    width: 80%;
+  }
+
+  .g {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}

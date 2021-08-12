@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">  
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: url(https://images.unsplash.com/photo-1587614204968-68ba4b5e0be3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80);
+        background-size: cover;
+        background-position: center;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: 1.3rem;
+        /* color: black; */
+        color: #fff;
+        cursor: pointer;
+        padding-bottom: 5px;
+        border: none;
+        transition: 0.3s all ease-out;
+      }
+      
+      .nav-container {
+        height: 80px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        box-shadow: 0 3px 10px #000;
+      }
+
+      .w-icon {
+        height: 80px;
+        width: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .icon {
+        width: 70px;
+        height: 70px;
+        padding-top: 10px;
+      }
+
+      .wh {
+        height: 100%;
+        margin: 0;
+        padding-left: 15px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .wh-1{
+        margin: 0;
+      }
+
+      .wh-2 {
+        margin: 0;
+        padding-left: 40px;
+      }
+
+      .nav-links {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        transition: 0.3s all ease-out;
+      }
+
+      .nav-links a:hover {
+        border-bottom: 2px solid #fff;
+        transition: 0.1s all ease-in;
+      }
+
+      .nl-item {
+        width: 45%;
+        text-align: center;
+        padding: 7px 0;
+        border: none;
+      }
+
+      
+
+      .footer-container {
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #003140;
+      }
+      
+      .footc {
+        color: #a4a4a4;
+      }
+
+    </style>
+
+    <title>{% block title %}{% endblock %}</title>
+    {% block style %}{% endblock %}
+  </head>
+
+  <body>
+    <div class="nav-container">
+      <div class="w-icon">
+        <a href="http://127.0.0.1:5000/">
+          <img class="icon" src="/static/website-icon.png" alt="webicon" style="filter: drop-shadow(3px 2px 2px #222)">
+        </a>
+        <div class="wh">
+          <h2 class="wh-1">Personality</h2>
+          <h2 class="wh-2">Prediciton</h2>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        <div class="nl-item">
+          <a href="http://127.0.0.1:5000/text-pred" target="_blank">Using Text</a>
+        </div>
+        <div class="nl-item">
+          <a href="http://127.0.0.1:5000/twitter-pred" target="_blank">Using Twitter</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container">
+      {% block body %} {% endblock %}
+    </div>
+
+    <div class="footer-container">
+      <div class="footer-content">
+        <p class="footc">Copyright © 2021</p>
+      </div>
+    </div>
+  </body>
+</html>
